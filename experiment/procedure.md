@@ -1,1 +1,1 @@
-### Procedure
+This experiment has two tabs `Function as a Parameter` and `Function as a Return Value`. Both these experiments have a particular task that you have to complete using some drag and drop functionality.
