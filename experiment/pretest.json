@@ -1,39 +1,221 @@
 {
   "version": 2.0,
+
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "What are higher-order functions in Python?",
+
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Functions that accept and/or return other functions",
+
+        "b": "Functions that operate on lists of numbers",
+
+        "c": "Functions that are defined inside other functions",
+
+        "d": "Functions that are decorated with a \"@staticmethod\" decorator"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
+
       "correctAnswer": "a",
-      "difficulty": "beginner"
+      "difficulty": "Beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": " Why would you want to use a higher-order function in Python?",
+
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": " To make your code more complex and difficult to read",
+
+        "b": "To save time when writing code",
+
+        "c": " To make your code more modular and easier to maintain",
+
+        "d": " To avoid using built-in Python functions"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
+
       "correctAnswer": "c",
-      "difficulty": "beginner"
+      "difficulty": "Beginner"
+    },
+    {
+      "question": "In the context of higher-order functions, what is a call back function?",
+
+      "answers": {
+        "a": "A function that is called only once ",
+
+        "b": "A function that is called by another function",
+
+        "c": "A function that is defined inside another function ",
+
+        "d": "None of the above"
+      },
+
+      "correctAnswer": "b",
+      "difficulty": "Beginner"
+    },
+
+    {
+      "question": "How do you pass a function as a parameter to another function in Python?",
+
+      "answers": {
+        "a": "By using a string with the name of the function",
+
+        "b": "By using a lambda expression",
+
+        "c": " By using the @ symbol",
+
+        "d": "By using the name of the function without parentheses"
+      },
+
+      "correctAnswer": "d",
+      "difficulty": "Beginner"
+    },
+    {
+      "question": "Which of the following is an example of a higher-order function in Python?",
+
+      "answers": {
+        "a": "print()",
+
+        "b": "len()",
+
+        "c": "map()",
+
+        "d": "All of the above"
+      },
+
+      "correctAnswer": "c",
+      "difficulty": "Beginner"
+    },
+
+    {
+      "question": "Which of the following statements is true about higher order functions in Python?",
+
+      "answers": {
+        "a": "They can only take other functions as parameters",
+
+        "b": "They can only be called by other functions",
+
+        "c": "They can take another function as a parameter or return a function as a result",
+
+        "d": "They can only return values, not functions"
+      },
+
+      "correctAnswer": "c",
+      "difficulty": "Intermediate"
+    },
+
+    {
+      "question": "What is the main advantage of a function returning another function in Python?",
+
+      "answers": {
+        "a": "It reduces the need for creating multiple functions for similar tasks",
+
+        "b": "It improves the performance of the code",
+
+        "c": "It reduces the complexity of the code",
+
+        "d": "It increases the modularity of the code"
+      },
+
+      "correctAnswer": "a",
+      "difficulty": "Intermediate"
+    },
+    {
+      "question": "Which of the following is an example of a higher order function that returns a function in Python?",
+
+      "answers": {
+        "a": "map()",
+
+        "b": "filter()",
+
+        "c": "reduce()",
+
+        "d": "All of the above"
+      },
+
+      "correctAnswer": "d",
+      "difficulty": "Intermediate"
+    },
+
+    {
+      "question": "What are decorators in Python?",
+
+      "answers": {
+        "a": "A way to define and reuse complex functions",
+
+        "b": "A way to add extra functionality to existing functions",
+
+        "c": "A way to create new built-in functions",
+
+        "d": "A way to convert functions to methods"
+      },
+
+      "correctAnswer": "B",
+      "difficulty": "Intermediate"
+    },
+
+    {
+      "question": "What are decorators in Python?",
+
+      "answers": {
+        "a": "A way to define and reuse complex functions",
+
+        "b": "A way to add extra functionality to existing functions",
+
+        "c": "A way to create new built-in functions",
+
+        "d": "A way to convert functions to methods"
+      },
+
+      "correctAnswer": "B",
+      "difficulty": "Intermediate"
+    },
+
+    {
+      "question": "Which of the following is a valid example of a higher-order function in Python?",
+
+      "answers": {
+        "a": "def my_func(x): return x+1",
+
+        "b": "def my_func(func, x): return func(x)",
+
+        "c": "def my_func(x, y): return x+y",
+
+        "d": "def my_func(): pass"
+      },
+
+      "correctAnswer": "b",
+      "difficulty": "Hard"
+    },
+    {
+      "question": " What is the purpose of a decorator in Python?",
+
+      "answers": {
+        "a": " To modify the behavior of an existing function without changing its source code.",
+
+        "b": " To add new functionality to an existing function without modifying its source code.",
+
+        "c": " To provide a mechanism for code reuse and modular programming.",
+
+        "d": " All of the above."
+      },
+
+      "correctAnswer": "b",
+      "difficulty": "Hard"
+    },
+
+    {
+      "question": "Which of the following is an example of a function that takes a function as an argument and returns a function as its result?",
+
+      "answers": {
+        "a": "def my_func(f): return lambda x: f(x)",
+
+        "b": "def my_func(f): return f(3)",
+
+        "c": "def my_func(f): return f",
+
+        "d": "def my_func(): pass"
+      },
+
+      "correctAnswer": "a",
+      "difficulty": "Hard"
     }
   ]
 }
