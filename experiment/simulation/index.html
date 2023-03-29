@@ -12,6 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
 
     <link
       rel="stylesheet"
@@ -80,20 +81,20 @@
             <div class="v-datalist-row code">
 >>> def HigherOrderFunction(list, stringFunc, listFunc): 
     	for i in range(len(list)): 
-    		list[i] = <div class="blank blank-parameter" draggable="true"></div>
-    	return <div class="blank blank-parameter" draggable="true"></div>
+    		list[i] = <div class="blank blank-parameter drag" draggable="true"></div>
+    	return <div class="blank blank-parameter drag" draggable="true"></div>
 
 >>> input = ["hello", "world", "this","is", "a", "list"] 
->>> output = HigherOrderFunction(input, <div class="blank blank-parameter" draggable="true"></div>, <div class="blank blank-parameter" draggable="true"></div>) 
+>>> output = HigherOrderFunction(input, <div class="blank blank-parameter drag" draggable="true"></div>, <div class="blank blank-parameter drag" draggable="true"></div>) 
 >>> print(output)
             </div>
             <div class="v-datalist-row options">
-              <div class="option" draggable="true">stringFunc(list[i])</div>
-              <div class="option" draggable="true">str.upper</div>
-              <div class="option" draggable="true">list.sort</div>
-              <div class="option" draggable="true">listFunc(list)</div>
-              <div class="option" draggable="true">lambda x: sorted(x)</div>
-              <div class="option" draggable="true">list[i].stringFunc()</div>
+              <div class="option drag" draggable="true">stringFunc(list[i])</div>
+              <div class="option drag" draggable="true">str.upper</div>
+              <div class="option drag" draggable="true">list.sort</div>
+              <div class="option drag" draggable="true">listFunc(list)</div>
+              <div class="option drag" draggable="true">lambda x: sorted(x)</div>
+              <div class="option drag" draggable="true">list[i].stringFunc()</div>
             </div>
             <button
               class="v-button"
@@ -197,22 +198,22 @@
             <div class="v-datalist-row code">
 >>> def HigherOrderFunction(stringFunc, listFunc): 
       def function(list):
-        return listFunc(<div class="blank blank-value" draggable="true"></div>(stringFunc, list))
+        return listFunc(<div class="blank blank-value drag" draggable="true"></div>(stringFunc, list))
       return function
 
 >>> input = ["hello", "world", "this","is", "a", "list"] 
->>> capAndSort = HigherOrderFunction(<div class="blank blank-value" draggable="true"></div>, <div class="blank blank-value" draggable="true"></div>) 
->>> output = <div class="blank blank-value" draggable="true"></div>
+>>> capAndSort = HigherOrderFunction(<div class="blank blank-value drag" draggable="true"></div>, <div class="blank blank-value drag" draggable="true"></div>) 
+>>> output = <div class="blank blank-value drag" draggable="true"></div>
 >>> print(output)
             </div>
             <div class="v-datalist-row options">
-              <div class="option" draggable="true">capAndSort(input)</div>
-              <div class="option" draggable="true">input.capAndSort()</div>
-              <div class="option" draggable="true">map</div>
-              <div class="option" draggable="true">filter</div>
-              <div class="option" draggable="true">lambda x: sorted(x)</div>
-              <div class="option" draggable="true">str.upper</div>
-              <div class="option" draggable="true">list.sort</div>
+              <div class="option drag" draggable="true">capAndSort(input)</div>
+              <div class="option drag" draggable="true">input.capAndSort()</div>
+              <div class="option drag" draggable="true">map</div>
+              <div class="option drag" draggable="true">filter</div>
+              <div class="option drag" draggable="true">lambda x: sorted(x)</div>
+              <div class="option drag" draggable="true">str.upper</div>
+              <div class="option drag" draggable="true">list.sort</div>
             </div>
             <button
               class="v-button"

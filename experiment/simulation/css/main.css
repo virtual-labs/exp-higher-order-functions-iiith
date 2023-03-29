@@ -16,6 +16,8 @@
   cursor: move;
   translate: 0 4px;
   font-size: small;
+  -ms-touch-action: none;
+  touch-action: none;
 }
 .options {
   display: flex;
@@ -34,6 +36,8 @@
   background-color: #ddd;
   border-radius: 10%;
   cursor: move;
+  -ms-touch-action: none;
+  touch-action: none;
 }
 
 .content {
@@ -82,4 +86,16 @@
 .all-value {
   font-size: large;
   font-weight: 900;
+}
+
+.drop-active {
+  border-style: dashed;
+}
+
+.drop-target {
+  background-color: #ccc;
+}
+
+.can-drop {
+  opacity: 0.5;
 }

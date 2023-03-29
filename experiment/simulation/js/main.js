@@ -158,55 +158,62 @@ window.onload = () => {
   rebuildList("list5-value", list3);
 };
 
-document.addEventListener("DOMContentLoaded", (event) => {
-  function handleDragStart(e) {
-    this.style.opacity = "0.4";
+function dragMoveListener(event) {
+  var target = event.target;
+  var x = (parseFloat(target.getAttribute("data-x")) || 0) + event.dx;
+  var y = (parseFloat(target.getAttribute("data-y")) || 0) + event.dy;
 
-    dragSrcEl = this;
+  target.style.transform = "translate(" + x + "px, " + y + "px)";
+  target.setAttribute("data-x", x);
+  target.setAttribute("data-y", y);
+}
 
-    e.dataTransfer.effectAllowed = "move";
-    e.dataTransfer.setData("text/html", this.innerHTML);
-  }
+interact(".drag").draggable({
+  inertia: true,
+  autoScroll: true,
+  onmove: dragMoveListener,
+  onend: function (event) {
+    var target = event.target;
+    target.style.transform = "";
+    target.setAttribute("data-x", 0);
+    target.setAttribute("data-y", 0);
+  },
+});
 
-  function handleDragEnd(e) {
-    this.style.opacity = "1";
+interact(".drag").dropzone({
+  accept: ".drag",
+  overlap: 0.01,
+  ondropactivate: function (event) {
+    event.target.classList.add("drop-active");
+  },
+  ondragenter: function (event) {
+    var draggableElement = event.relatedTarget;
+    var dropzoneElement = event.target;
 
-    items.forEach(function (item) {
-      item.classList.remove("over");
-    });
-  }
+    dropzoneElement.classList.add("drop-target");
+    draggableElement.classList.add("can-drop");
+  },
+  ondragleave: function (event) {
+    var draggableElement = event.relatedTarget;
+    var dropzoneElement = event.target;
 
-  function handleDragOver(e) {
-    e.preventDefault();
-    return false;
-  }
+    dropzoneElement.classList.remove("drop-target");
+    draggableElement.classList.remove("can-drop");
+  },
+  ondrop: function (event) {
+    var draggableElement = event.relatedTarget;
+    var dropzoneElement = event.target;
+    var temp = dropzoneElement.innerHTML;
+    console.log(dropzoneElement.innerHTML, draggableElement.innerHTML);
 
-  function handleDragEnter(e) {
-    this.classList.add("over");
-  }
+    dropzoneElement.innerHTML = draggableElement.innerHTML;
+    draggableElement.innerHTML = temp;
 
-  function handleDragLeave(e) {
-    this.classList.remove("over");
-  }
-
-  function handleDrop(e) {
-    e.stopPropagation(); // stops the browser from redirecting.
-    if (dragSrcEl !== this) {
-      dragSrcEl.innerHTML = this.innerHTML;
-      this.innerHTML = e.dataTransfer.getData("text/html");
-    }
-
-    return false;
-  }
-
-  let items = document.querySelectorAll(".option");
-  items = [...items, ...document.querySelectorAll(".blank")];
-  items.forEach(function (item) {
-    item.addEventListener("dragstart", handleDragStart);
-    item.addEventListener("dragover", handleDragOver);
-    item.addEventListener("dragenter", handleDragEnter);
-    item.addEventListener("dragleave", handleDragLeave);
-    item.addEventListener("dragend", handleDragEnd);
-    item.addEventListener("drop", handleDrop);
-  });
+    dropzoneElement.classList.remove("drop-target");
+    draggableElement.classList.remove("can-drop");
+  },
+  ondropdeactivate: function (event) {
+    event.target.classList.remove("drop-active");
+    event.target.classList.remove("drop-target");
+  },
 });
