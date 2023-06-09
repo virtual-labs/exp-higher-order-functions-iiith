@@ -1,1 +1,1 @@
-### To learn more about higher order functions and how they can help make code more modular and organized.
+To learn more about higher order functions and how they can help make code more modular and organized.
