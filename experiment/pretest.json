@@ -16,7 +16,7 @@
       },
 
       "correctAnswer": "a",
-      "difficulty": "Beginner"
+      "difficulty": "beginner"
     },
     {
       "question": " Why would you want to use a higher-order function in Python?",
@@ -32,7 +32,7 @@
       },
 
       "correctAnswer": "c",
-      "difficulty": "Beginner"
+      "difficulty": "beginner"
     },
     {
       "question": "In the context of higher-order functions, what is a call back function?",
@@ -48,7 +48,7 @@
       },
 
       "correctAnswer": "b",
-      "difficulty": "Beginner"
+      "difficulty": "beginner"
     },
 
     {
@@ -65,7 +65,7 @@
       },
 
       "correctAnswer": "d",
-      "difficulty": "Beginner"
+      "difficulty": "beginner"
     },
     {
       "question": "Which of the following is an example of a higher-order function in Python?",
@@ -81,7 +81,7 @@
       },
 
       "correctAnswer": "c",
-      "difficulty": "Beginner"
+      "difficulty": "beginner"
     },
 
     {
@@ -98,7 +98,7 @@
       },
 
       "correctAnswer": "c",
-      "difficulty": "Intermediate"
+      "difficulty": "intermediate"
     },
 
     {
@@ -115,7 +115,7 @@
       },
 
       "correctAnswer": "a",
-      "difficulty": "Intermediate"
+      "difficulty": "intermediate"
     },
     {
       "question": "Which of the following is an example of a higher order function that returns a function in Python?",
@@ -131,7 +131,7 @@
       },
 
       "correctAnswer": "d",
-      "difficulty": "Intermediate"
+      "difficulty": "intermediate"
     },
 
     {
@@ -148,7 +148,7 @@
       },
 
       "correctAnswer": "B",
-      "difficulty": "Intermediate"
+      "difficulty": "intermediate"
     },
 
     {
@@ -165,7 +165,7 @@
       },
 
       "correctAnswer": "B",
-      "difficulty": "Intermediate"
+      "difficulty": "intermediate"
     },
 
     {
@@ -182,7 +182,7 @@
       },
 
       "correctAnswer": "b",
-      "difficulty": "Hard"
+      "difficulty": "advanced"
     },
     {
       "question": " What is the purpose of a decorator in Python?",
@@ -198,7 +198,7 @@
       },
 
       "correctAnswer": "b",
-      "difficulty": "Hard"
+      "difficulty": "advanced"
     },
 
     {
@@ -215,7 +215,7 @@
       },
 
       "correctAnswer": "a",
-      "difficulty": "Hard"
+      "difficulty": "advanced"
     }
   ]
 }

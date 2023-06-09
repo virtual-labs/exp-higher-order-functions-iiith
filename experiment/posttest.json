@@ -16,7 +16,7 @@
       },
 
       "correctAnswer": "c",
-      "difficulty": "Beginner"
+      "difficulty": "beginner"
     },
     {
       "question": "What is the purpose of the strip() function in Python?",
@@ -32,7 +32,7 @@
       },
 
       "correctAnswer": "a",
-      "difficulty": "Beginner"
+      "difficulty": "beginner"
     },
     {
       "question": "Which built-in function is used to convert a string into lowercase in Python?",
@@ -48,7 +48,7 @@
       },
 
       "correctAnswer": "d",
-      "difficulty": "Beginner"
+      "difficulty": "beginner"
     },
 
     {
@@ -65,7 +65,7 @@
       },
 
       "correctAnswer": "a",
-      "difficulty": "Beginner"
+      "difficulty": "beginner"
     },
 
     {
@@ -82,7 +82,7 @@
       },
 
       "correctAnswer": "a",
-      "difficulty": "Beginner"
+      "difficulty": "beginner"
     },
 
     {
@@ -99,7 +99,7 @@
       },
 
       "correctAnswer": "b",
-      "difficulty": "Intermediate"
+      "difficulty": "intermediate"
     },
 
     {
@@ -116,7 +116,7 @@
       },
 
       "correctAnswer": "b",
-      "difficulty": "Intermediate"
+      "difficulty": "intermediate"
     },
     {
       "question": "What is the purpose of the strip() function used in the normalize_school_names function?(Refer code provided in theory section)",
@@ -132,7 +132,7 @@
       },
 
       "correctAnswer": "b",
-      "difficulty": "Intermediate"
+      "difficulty": "intermediate"
     },
 
     {
@@ -149,7 +149,7 @@
       },
 
       "correctAnswer": "b",
-      "difficulty": "Intermediate"
+      "difficulty": "intermediate"
     },
 
     {
@@ -166,7 +166,7 @@
       },
 
       "correctAnswer": "b",
-      "difficulty": "Hard"
+      "difficulty": "advanced"
     },
     {
       "question": " What is the advantage of using a high-order function in the \"normalize_school_names\" function?(Refer code provided in theory section)",
@@ -182,7 +182,7 @@
       },
 
       "correctAnswer": "c",
-      "difficulty": "Hard"
+      "difficulty": "advanced"
     },
 
     {
@@ -199,7 +199,7 @@
       },
 
       "correctAnswer": "b",
-      "difficulty": "Hard"
+      "difficulty": "advanced"
     }
   ]
 }
