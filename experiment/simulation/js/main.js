@@ -101,6 +101,8 @@ function handleSubmit() {
     document.getElementsByClassName("all")[0].classList.remove("hidden");
     return;
   }
+  let answer = ["stringFunc(list[i])", "listFunc(list)", "str.upper", "lambda x: sorted(x)"]
+  let times = ['first', 'second', 'third', 'fourth']
   if (
     elements[0].innerHTML == "stringFunc(list[i])" &&
     elements[1].innerHTML == "listFunc(list)" &&
@@ -114,6 +116,11 @@ function handleSubmit() {
   } else {
     document.getElementsByClassName("correct")[0].classList.add("hidden");
     document.getElementsByClassName("wrong")[0].classList.remove("hidden");
+    for(let i = 0; i < 4; i++){
+      if(elements[i].innerHTML != answer[i]){
+        document.getElementsByClassName("wrong")[0].innerHTML = `You made a mistake in the ${times[i]} blank.`
+      }
+    }
   }
 }
 
@@ -129,6 +136,8 @@ function handleSubmitValue() {
     document.getElementsByClassName("all")[0].classList.remove("hidden");
     return;
   }
+  let answer = ["map", "str.upper", "lambda x: sorted(x)", "capAndSort(input)"]
+  let times = ['first', 'second', 'third', 'fourth']
   if (
     elements[0].innerHTML == "map" &&
     elements[1].innerHTML == "str.upper" &&
@@ -142,6 +151,11 @@ function handleSubmitValue() {
   } else {
     document.getElementsByClassName("correct-value")[0].classList.add("hidden");
     document.getElementsByClassName("wrong-value")[0].classList.remove("hidden");
+    for(let i = 0; i < 4; i++){
+      if(elements[i].innerHTML != answer[i]){
+        document.getElementsByClassName("wrong-value")[0].innerHTML = `You made a mistake in the ${times[i]} blank.`
+      }
+    }
   }
 }
 
