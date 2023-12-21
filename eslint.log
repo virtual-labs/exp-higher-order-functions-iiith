@@ -1,0 +1,11 @@
+
+/home/runner/work/exp-higher-order-functions-iiith/exp-higher-order-functions-iiith/experiment/simulation/js/main.js
+   28:10  warning  'clearList' is defined but never used          no-unused-vars
+   35:10  warning  'changeTabs' is defined but never used         no-unused-vars
+   92:10  warning  'handleSubmit' is defined but never used       no-unused-vars
+  127:10  warning  'handleSubmitValue' is defined but never used  no-unused-vars
+  185:1   warning  'interact' is not defined                      no-undef
+  197:1   warning  'interact' is not defined                      no-undef
+
+✖ 6 problems (0 errors, 6 warnings)
+
