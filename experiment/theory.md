@@ -107,7 +107,7 @@ def num_1(x):
 
 ```py
 object_1=num_1(2) # x=2
-            print(object_1(3))
+print(object_1(3))
 ```
 
 1. The above code explains that we are calling the outer  function i.e num_1() with the help of the variable object_1, and now we will be able to call that variable as the memory address of that function 
@@ -182,7 +182,7 @@ books_normalized=normalize_book_names(list_of_books,normalization_function)
 print(books_normalized)
 ```
 
-` `Now, before moving to the next test-case Ashish decides to show the newly written code to his team lead and obtain his feedback for the same.
+Now, before moving to the next test-case Ashish decides to show the newly written code to his team lead and obtain his feedback for the same.
 
 Image 5. Describes that his team lead gave a thumbs-up to his code, and asked him to proceed further. 
 

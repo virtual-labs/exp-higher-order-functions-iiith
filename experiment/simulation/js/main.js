@@ -101,6 +101,7 @@ function handleSubmit() {
     document.getElementsByClassName("all")[0].classList.remove("hidden");
     return;
   }
+  document.getElementsByClassName("all")[0].classList.add("hidden");
   let answer = ["stringFunc(list[i])", "listFunc(list)", "str.upper", "lambda x: sorted(x)"]
   let times = ['first', 'second', 'third', 'fourth']
   if (
@@ -116,11 +117,14 @@ function handleSubmit() {
   } else {
     document.getElementsByClassName("correct")[0].classList.add("hidden");
     document.getElementsByClassName("wrong")[0].classList.remove("hidden");
+    wrong = [];
     for(let i = 0; i < 4; i++){
       if(elements[i].innerHTML != answer[i]){
-        document.getElementsByClassName("wrong")[0].innerHTML = `You made a mistake in the ${times[i]} blank.`
+        wrong.push(times[i]);
       }
     }
+    wrong_string = wrong.slice(0, -1).join(', ') + (wrong.length > 1 ? ' and ' : '') + wrong.slice(-1);
+    document.getElementsByClassName("wrong")[0].innerHTML = `You made a mistake in the ${wrong_string} blank.`
   }
 }
 
@@ -151,11 +155,14 @@ function handleSubmitValue() {
   } else {
     document.getElementsByClassName("correct-value")[0].classList.add("hidden");
     document.getElementsByClassName("wrong-value")[0].classList.remove("hidden");
+    wrong = [];
     for(let i = 0; i < 4; i++){
       if(elements[i].innerHTML != answer[i]){
-        document.getElementsByClassName("wrong-value")[0].innerHTML = `You made a mistake in the ${times[i]} blank.`
+        wrong.push(times[i]);
       }
     }
+    wrong_string = wrong.slice(0, -1).join(', ') + (wrong.length > 1 ? ' and ' : '') + wrong.slice(-1);
+    document.getElementsByClassName("wrong-value")[0].innerHTML = `You made a mistake in the ${wrong_string} blank.`
   }
 }
 
