@@ -3,7 +3,7 @@ In this experiment we are going to learn about high order functions in python, u
 
 |<p>1.</p><p>![](images/Aspose.Words.a235e1fd-7bf5-4887-b33d-8264cb0c61e9.001.png)</p>|<p>2.</p><p>![](images/Aspose.Words.a235e1fd-7bf5-4887-b33d-8264cb0c61e9.002.png)</p>|<p>3.</p><p>![](images/Aspose.Words.a235e1fd-7bf5-4887-b33d-8264cb0c61e9.003.png)</p>|
 | :- | :- | :- |
-|<p>4.</p><p>![](images/Aspose.Words.a235e1fd-7bf5-4887-b33d-8264cb0c61e9.004.png)</p>|<p>5.</p><p>![](images/Aspose.Words.a235e1fd-7bf5-4887-b33d-8264cb0c61e9.005.png)</p>|<p>6.</p><p>![](images/Aspose.Words.a235e1fd-7bf5-4887-b33d-8264cb0c61e9.006.png)</p>|
+|<p>4.</p><p>![](images/Aspose.Words.a235e1fd-7bf5-4887-b33d-8264cb0c61e9.004.png)</p>|<p>5.</p><p>![](images/Aspose.Words.a235e1fd-7bf5-4887-b33d-8264cb0c61e9.005.png)</p>|<p>6.</p><p>![](images/team.jpeg)</p>|
 
 Image 1. Represents Ashish was offered a job in a startup as a website developer, he selection happened via campus placements and he decided to accept the offer . On his first day in the organisation, he was introduced to all his team members and he was placed into a new project, in that project his team lead had asked him to develop various functions in python (which he thinks would be applicable)  for a online book store website , and write a code for the same. He started thinking about various test cases and finally  he figured out a test-case i.e inserting names of a list of available books in the store, and this would be done by the website admin. So he decided to write a function for the same using python programming language 
 
