@@ -1,13 +1,279 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<!-- Add CSS at the head of HTML file -->
-    <link rel="stylesheet" href="./css/main.css">
-</head>
-<body>
-		<!-- Your code goes here-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	<!-- Add JS at the bottom of HTML file --> 
-        <script src="./js/main.js"></script>
-</body>
+    <title>Higher Order Functions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/virtual-labs/virtual-style@0.0.8-b/css/style.min.css"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="v-tabs">
+            <ul>
+              <li class="is-active" id="task1" onclick="changeTabs(event)">
+                <a> Function as a parameter </a>
+              </li>
+              <li id="task2" onclick="changeTabs(event)">
+                <a> Function as a return value </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+    <div>
+      <div
+        class="parameter columns is-centered is-flex-direction-row is-flex-wrap-wrap"
+      >
+        <div class="column is-4-desktop is-12-tablet is-12-mobile">
+          <div class="v-datalist-container" style="height: 100%">
+            <div class="v-datalist-title">
+              Let's learn Higher Order Functions!
+            </div>
+            <div class="v-datalist-row">
+              Drag and drop the options to the blanks to complete the program to
+              form a function that takes in a function as parameter.
+            </div>
+            <div class="v-datalist-row v-bold">
+              The goal of this function will be to take a list of strings, a
+              string function and a list function as arguments.
+              <br />Then it will apply the string function to each string in the
+              list and apply the list function to the whole list.
+            </div>
+            <div
+              class="v-datalist-row"
+              style="
+                font-family: 'Fira Mono', 'monospace';
+                font-size: medium;
+                line-height: 40px;
+              "
+            >
+              Input = ['hello', 'this', 'is', 'a', 'list']
+              <br />
+              Output = ['A', 'HELLO', 'IS', 'LIST', 'THIS']
+            </div>
+          </div>
+        </div>
+        <div class="parameter column is-5-desktop is-12-tablet is-12-mobile">
+          <div class="v-datalist-container">
+            <div class="v-datalist-title">Complete the program</div>
+            <!-- prettier-ignore -->
+            <div class="v-datalist-row code">
+>>> def HigherOrderFunction(list, stringFunc, listFunc): 
+    	for i in range(len(list)): 
+    		list[i] = <div class="blank blank-parameter drag" draggable="true"></div>
+    	return <div class="blank blank-parameter drag" draggable="true"></div>
+
+>>> input = ["hello", "this","is", "a", "list"] 
+>>> output = HigherOrderFunction(input, <div class="blank blank-parameter drag" draggable="true"></div>, <div class="blank blank-parameter drag" draggable="true"></div>) 
+>>> print(output)
+            </div>
+            <div class="v-datalist-row options">
+              <div class="option drag" draggable="true">stringFunc(list[i])</div>
+              <div class="option drag" draggable="true">str.upper</div>
+              <div class="option drag" draggable="true">list.sort</div>
+              <div class="option drag" draggable="true">listFunc(list)</div>
+              <div class="option drag" draggable="true">lambda x: sorted(x)</div>
+              <div class="option drag" draggable="true">list[i].stringFunc()</div>
+            </div>
+            <button
+              class="v-button"
+              style="margin-bottom: 1rem"
+              onclick="handleSubmit()"
+            >
+              Submit
+            </button>
+            <div class="v-datalist-row hidden correct">
+              Correct Answer! Read the observations
+            </div>
+            <div class="v-datalist-row hidden wrong">Wrong Answer</div>
+            <div class="v-datalist-row hidden all">Fill all the blanks.</div>
+          </div>
+        </div>
+        <div class="parameter column is-4-desktop is-12-tablet is-12-mobile">
+          <div class="v-datalist-container">
+            <div class="v-datalist-title">
+              Observations(Without Higher Order Functions)
+            </div>
+            <div class="v-datalist-row v-bold">
+              Without Higher-Order Functions this same application would have
+              either had a separate function or would have taken two steps to
+              complete.
+            </div>
+            <div id="list1" class="v-datalist-row list hidden without"></div>
+            <div class="without hidden">
+              <big>
+                <big><big>&#8595;</big></big>
+              </big>
+            </div>
+            <div id="list2" class="v-datalist-row list hidden without"></div>
+            <div class="without hidden">
+              <big>
+                <big><big>&#8595;</big></big>
+              </big>
+            </div>
+            <div id="list3" class="v-datalist-row list hidden without"></div>
+          </div>
+        </div>
+        <div class="parameter column is-5-desktop is-12-tablet is-12-mobile">
+          <div class="v-datalist-container">
+            <div class="v-datalist-title">
+              Observations(With Higher Order Functions)
+            </div>
+            <div class="v-datalist-row v-bold">
+              With Higher Order Functions, this function can do the thing in one
+              step and also promotes modular code as you can use it for other
+              purposes as well.
+            </div>
+            <div id="list4" class="v-datalist-row list hidden with"></div>
+            <div class="hidden with">
+              <big>
+                <big><big>&#8595;</big></big>
+              </big>
+            </div>
+            <div id="list5" class="v-datalist-row list hidden with"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div
+        class="value hidden columns is-centered is-flex-direction-row is-flex-wrap-wrap"
+      >
+        <div class="column is-4-desktop is-12-tablet is-12-mobile">
+          <div class="v-datalist-container" style="height: 100%">
+            <div class="v-datalist-title">
+              Let's learn Higher Order Functions!
+            </div>
+            <div class="v-datalist-row">
+              Drag and drop the options to the blanks to complete the program to
+              form a function that returns a function as a value.
+            </div>
+            <div class="v-datalist-row v-bold">
+              The goal of this function will be to take a string function and a
+              list function as arguments.
+              <br />Then it will return a function which applies the string
+              function on all elements of the list and then applies the list
+              function on the list.
+            </div>
+            <div
+              class="v-datalist-row"
+              style="
+                font-family: 'Fira Mono', 'monospace';
+                font-size: medium;
+                line-height: 40px;
+              "
+            >
+              input = ['hello', 'this', 'is', 'a', 'list']
+              <br />
+              output = ['A', 'HELLO', 'IS', 'LIST', 'THIS']
+            </div>
+          </div>
+        </div>
+        <div class="value hidden column is-5-desktop is-12-tablet is-12-mobile">
+          <div class="v-datalist-container">
+            <div class="v-datalist-title">Complete the program</div>
+            <!-- prettier-ignore -->
+            <div class="v-datalist-row code">
+>>> def HigherOrderFunction(stringFunc, listFunc): 
+      def function(list):
+        return listFunc(<div class="blank blank-value drag" draggable="true"></div>(stringFunc, list))
+      return function
+
+>>> input = ["hello", "this","is", "a", "list"] 
+>>> capAndSort = HigherOrderFunction(<div class="blank blank-value drag" draggable="true"></div>, <div class="blank blank-value drag" draggable="true"></div>) 
+>>> output = <div class="blank blank-value drag" draggable="true"></div>
+>>> print(output)
+            </div>
+            <div class="v-datalist-row options">
+              <div class="option drag" draggable="true">capAndSort(input)</div>
+              <div class="option drag" draggable="true">input.capAndSort()</div>
+              <div class="option drag" draggable="true">map</div>
+              <div class="option drag" draggable="true">filter</div>
+              <div class="option drag" draggable="true">lambda x: sorted(x)</div>
+              <div class="option drag" draggable="true">str.upper</div>
+              <div class="option drag" draggable="true">list.sort</div>
+            </div>
+            <button
+              class="v-button"
+              style="margin-bottom: 1rem"
+              onclick="handleSubmitValue()"
+            >
+              Submit
+            </button>
+            <div class="v-datalist-row hidden correct-value">
+              Correct Answer! Read the observations
+            </div>
+            <div class="v-datalist-row hidden wrong-value">Wrong Answer :(</div>
+            <div class="v-datalist-row hidden all-value">Fill all the blanks.</div>
+          </div>
+        </div>
+        <div class="value hidden column is-4-desktop is-12-tablet is-12-mobile">
+          <div class="v-datalist-container">
+            <div class="v-datalist-title">
+              Observations(Without Higher Order Functions)
+            </div>
+            <div class="v-datalist-row v-bold">
+              Without Higher-Order Functions this same application would require
+              you to create a separate function for each string function you
+              want to apply to the list.
+            </div>
+            <div id="list1-value" class="v-datalist-row list hidden without-value"></div>
+            <div class="without-value hidden">
+              <big>
+                <big><big>&#8595;</big></big>
+              </big>
+            </div>
+            <div id="list2-value" class="v-datalist-row list hidden without-value"></div>
+            <div class="without-value hidden">
+              <big>
+                <big><big>&#8595;</big></big>
+              </big>
+            </div>
+            <div id="list3-value" class="v-datalist-row list hidden without-value"></div>
+          </div>
+        </div>
+        <div class="value hidden column is-5-desktop is-12-tablet is-12-mobile">
+          <div class="v-datalist-container">
+            <div class="v-datalist-title">
+              Observations(With Higher Order Functions)
+            </div>
+            <div class="v-datalist-row v-bold">
+              With Higher Order Functions, this function can complete the
+              requirement and provide you a function that can do this how many
+              ever times you want. It also promotes modular code as you can use
+              this function for multiple purposes.
+            </div>
+            <div id="list4-value" class="v-datalist-row list hidden with-value"></div>
+            <div class="hidden with-value">
+              <big>
+                <big><big>&#8595;</big></big>
+              </big>
+            </div>
+            <div id="list5-value" class="v-datalist-row list hidden with-value"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+  </body>
 </html>

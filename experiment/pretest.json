@@ -1,39 +1,196 @@
 {
   "version": 2.0,
+
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "What are higher-order functions in Python?",
+
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Functions that accept and/or return other functions",
+
+        "b": "Functions that operate on lists of numbers",
+
+        "c": "Functions that are defined inside other functions",
+
+        "d": "Functions that are decorated with a \"@staticmethod\" decorator"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+       "explanations": {
+                          "a": "This option is correct. Higher-order functions in Python are functions that can accept other functions as arguments and/or return functions as their results. They treat functions as first-class citizens, allowing them to be manipulated and used as data.",
+                          "b": "This option is incorrect. While higher-order functions can operate on lists of numbers, their definition is not limited to this specific behavior. Higher-order functions can work with various types of data, not just lists of numbers.",
+                          "c": "This option is incorrect. Functions that are defined inside other functions are called nested functions or inner functions. They are not necessarily higher-order functions. Higher-order functions involve the acceptance and/or return of other functions, but they can be defined at the global level as well.",
+                          "d": "This option is incorrect. Static methods in Python are not necessarily higher-order functions. They are methods that belong to a class and can be called on the class itself, without requiring an instance. Higher-order functions are not directly related to the @staticmethod decorator."
       },
+
       "correctAnswer": "a",
-      "difficulty": "beginner"
+      "difficulty": "Beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": " Why would you want to use a higher-order function in Python?",
+
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": " To make your code more complex and difficult to read",
+
+        "b": "To save time when writing code",
+
+        "c": " To make your code more modular and easier to maintain",
+
+        "d": " To avoid using built-in Python functions"
+      },
+       "explanations": {
+                          "a": "This option is incorrect. The purpose of using higher-order functions is not to make the code more complex or difficult to read. Higher-order functions can actually help simplify and organize code by promoting modularity and reusability.",
+                          "b": "This option is partially correct. Higher-order functions can save time when writing code by providing reusable patterns and abstractions. They allow you to abstract away common operations into functions, reducing the amount of repetitive code you need to write.",
+                          "c": "This option is correct. One of the main advantages of using higher-order functions is that they promote modularity and improve code maintainability. By abstracting common operations into separate functions, you can modularize your code and make it easier to understand, test, and update.",
+                          "d": "This option is incorrect. Higher-order functions are not used to avoid built-in Python functions. In fact, higher-order functions often work in conjunction with built-in functions to provide more flexibility and customization in code implementation."
+      },
+
+      "correctAnswer": "c",
+      "difficulty": "Beginner"
+    },
+    {
+      "question": "In the context of higher-order functions, what is a call back function?",
+
+      "answers": {
+        "a": "A function that is called only once ",
+
+        "b": "A function that is called by another function",
+
+        "c": "A function that is defined inside another function ",
+
+        "d": "None of the above"
+      },
+       "explanations": {
+                        "a": "This option is incorrect. A callback function can be called multiple times depending on the logic and design of the higher-order function. It is not limited to being called only once.",
+                        "b": "This option is correct. In the context of higher-order functions, a callback function is a function that is passed as an argument to another function and is invoked or called by that function at a specific point or in response to a certain event or condition.",
+                        "c": "This option refers to a nested function, which is not necessarily the same as a callback function. While a callback function can be defined inside another function, it is not a requirement. Callback functions can also be defined independently and passed as arguments to other functions.",
+                        "d": "This option is incorrect since option b) is the correct explanation for a callback function in the context of higher-order functions."
+      },
+
+      "correctAnswer": "b",
+      "difficulty": "Beginner"
+    },
+
+    
+    {
+      "question": "Which of the following is an example of a higher-order function in Python?",
+
+      "answers": {
+        "a": "print()",
+
+        "b": "len()",
+
+        "c": "map()",
+
+        "d": "All of the above"
+      },
+       "explanations": {
+                          "a": "The print() function in Python is not a higher-order function. It is a built-in function used for displaying output to the console. It does not accept or return other functions.",
+                          "b": "The len() function in Python is not a higher-order function. It is a built-in function used to determine the length of an object such as a string, list, or tuple. It does not accept or return other functions.",
+                          "c": "The map() function in Python is an example of a higher-order function. It takes a function and an iterable as input and applies the function to each element of the iterable, returning an iterator with the results.",
+                          "d": "This option is incorrect because print() and len() are not higher-order functions. Only map() is a higher-order function."
+      },
+
+      "correctAnswer": "c",
+      "difficulty": "Beginner"
+    },
+
+    {
+      "question": "Which of the following statements is true about higher order functions in Python?",
+
+      "answers": {
+        "a": "They can only take other functions as parameters",
+
+        "b": "They can only be called by other functions",
+
+        "c": "They can take another function as a parameter or return a function as a result",
+
+        "d": "They can only return values, not functions"
+      },
+       "explanations": {
+                          "a": "This statement is not true. Higher-order functions in Python can take other functions as parameters, but they can also take other types of objects as parameters.",
+                          "b": "This statement is not true. Higher-order functions can be called by other functions, but they can also be called directly in code.",
+                          "c": "This statement is true. Higher-order functions in Python have the ability to take other functions as parameters and/or return a function as a result. This is what distinguishes them as higher-order functions.",
+                          "d": "This statement is not true. Higher-order functions in Python can return values, but they can also return functions."
+      },
+
+      "correctAnswer": "c",
+      "difficulty": "Intermediate"
+    },
+
+    
+
+    {
+      "question": "What are decorators in Python?",
+
+      "answers": {
+        "a": "A way to define and reuse complex functions",
+
+        "b": "A way to add extra functionality to existing functions",
+
+        "c": "A way to create new built-in functions",
+
+        "d": "A way to convert functions to methods"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+                        "a": "This option is not correct. Decorators in Python are not specifically used for defining and reusing complex functions. They are used to add extra functionality to existing functions.",
+                        "b": "This option is correct. Decorators in Python are used to modify or enhance the behavior of existing functions without modifying their original code. They allow you to add extra functionality such as logging, timing, caching, or authentication to functions.",
+                        "c": "This option is not correct. Decorators do not create new built-in functions. They are used to modify the behavior of existing functions.",
+                        "d": "This option is not correct. Decorators do not convert functions to methods. They are used to enhance the functionality of functions, regardless of whether they are regular functions or methods."
       },
-      "correctAnswer": "c",
-      "difficulty": "beginner"
+
+      "correctAnswer": "b",
+      "difficulty": "Intermediate"
+    },
+     
+
+    
+
+    {
+      "question": "Which of the following is a valid example of a higher-order function in Python?",
+
+      "answers": {
+        "a": "def my_func(x): return x+1",
+
+        "b": "def my_func(func, x): return func(x)",
+
+        "c": "def my_func(x, y): return x+y",
+
+        "d": "def my_func(): pass"
+      },
+       "explanations": {
+                          "a": "This is not an example of a higher-order function. It is a simple function that takes an argument and returns the argument incremented by 1.",
+                          "b": "This is a valid example of a higher-order function. It takes a function as a parameter and applies that function to the second parameter.",
+                          "c": "This is not an example of a higher-order function. It is a simple function that takes two arguments and returns their sum.",
+                          "d": "This is not an example of a higher-order function. It is a function with no parameters and no functionality."
+      },
+
+      "correctAnswer": "b",
+      "difficulty": "Hard"
+    },
+    
+
+   
+
+    {
+      "question": "Which of the following is an example of a function that takes a function as an argument and returns a function as its result?",
+
+      "answers": {
+        "a": "def my_func(f): return lambda x: f(x)",
+
+        "b": "def my_func(f): return f(3)",
+
+        "c": "def my_func(f): return f",
+
+        "d": "def my_func(): pass"
+      },
+       "explanations": {
+                          "a": "This is an example of a function that takes a function as an argument and returns a function as its result. It uses a lambda function to create a new function that applies the input function to the given argument.",
+                          "b": "This is not an example of a function that returns a function as its result. It is a function that takes a function as an argument and immediately invokes it with the value 3.",
+                          "c": "This is not an example of a function that returns a function as its result. It is a function that takes a function as an argument and returns the same function without any modification.",
+                          "d": "This is not an example of a function that takes a function as an argument and returns a function as its result. It is a function with no parameters and no functionality."
+      },
+
+      "correctAnswer": "a",
+      "difficulty": "Hard"
     }
   ]
 }
